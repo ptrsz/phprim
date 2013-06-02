@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+
+body{
+	background-image:url(../images/backgroundtexture.png);
+	background-color:#f9f9f9;
+	color:#2d2d2d;
+}
+
+
+
+.wrapper{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+}
+
+.content{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+
+#top{
+	height:100px;
+}
+
+#logo{
+	/*background: url(../images/logo.png) no-repeat 100%;*/
+	margin-top:5%;
+	text-decoration:none;
+}
+
+
+header{
+	width:100%;
+	margin:5% 0 5% 0;
+}
+
+header h1{
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:140%;
+	font-weight:normal;
+	letter-spacing:1px;
+	margin-bottom:1%;
+}
+
+header h1 span{
+	color:#f38094;
+	text-shadow: 0 1px 1px #dadada;
+}
+
+header h2{
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:100%;
+	font-weight:normal;
+}
+
+
+#footer{
+	margin-top: 100px;
+	font-size: small;
+	color: #7d7d7d;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+/* ----------------------------- FORM ----------------------------------- */
+input, textarea { 
+	padding: 9px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	width: 200px;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	}
+
+textarea { 
+	width: 400px;
+	max-width: 400px;
+	height: 150px;
+	line-height: 150%;
+	}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus { 
+	border-color: #C9C9C9; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	}
+
+.form label { 
+	margin-left: 10px; 
+	color: #999999; 
+	}
+
+.submit input {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+/* ---------------------- RESPONSIVE STUFF - ONLY TOUCH IF YOUR'E CONFIDENT WITH CSS ---------------------- */
+
+
+@media only screen and (max-width: 1279px) {
+	.wrapper{
+		width:90%;
+	}
+	
+}
+
+@media only screen and (max-width: 1105px) {
+	
+	#work{
+		width:900px;
+}
+
+	.item{
+		width:164px;
+		height:170px;
+		margin:8px;
+	}
+}
+
+@media only screen and (max-width: 999px) {
+	
+	#work{
+		width:750px;	
+}
+
+	.item{
+		width:136px;
+		height:144px;
+		margin:7px;
+	}
+	
+	.item h3{
+		font-size:90%;
+	}
+	
+	.item p{
+		font-size:60%;
+	}
+}
+
+@media only screen and (max-width: 835px) {
+	
+	#work{
+		width:650px;	
+}
+
+	.item{
+		width:116px;
+		height:121px;
+		margin:7px;
+	}
+	
+	.item h3{
+		font-size:75%;
+	}
+	
+	.item p{
+		font-size:40%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	header h1{
+		font-size:110%;
+	}
+	
+	header h2{
+		font-size:80%;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	
+	#logo{
+		width:150px;
+		display:block;
+		margin:auto;
+		margin-bottom:5%;
+	}
+	
+	nav{
+		width:100%;
+	}
+	
+	header h1{
+		font-size:100%;
+		margin-bottom:5%;
+	}
+	
+	header h2{
+		font-size:60%;
+	}
+	
+	.left{
+		width:100%;
+	}
+	
+	.right{
+		width:100%;
+	
+	}
+	
+	#work{
+		width:460px;	
+}
+
+	.item{
+		width:210px;
+		height:215px;
+		margin:10px;
+	}
+	
+	.item h3{
+		font-size:130%;
+	}
+	
+	.item p{
+		font-size:90%;
+	}
+}
+
+@media only screen and (max-width: 510px) {
+	
+	#work{
+		width:300px;	
+	}
+
+	.item{
+		width:136px;
+		height:140px;
+		margin:7px;
+	}
+	
+	.item h3{
+		font-size:75%;
+	}
+	
+	.item p{
+		font-size:40%;
+	}
+}
+
+
+	
+	
