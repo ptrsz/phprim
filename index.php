@@ -16,8 +16,8 @@
 	
 		<div id="top">
 	        <div id="logo">
-	            <h1 id="logotitle">rímkereső</h1>
-	            alfa verzió!
+	            <h1 id="logotitle">Rímkereső</h1>
+	            alpha verzió!
 	        </div>
 	    </div>      
 	    	<div class="form">
