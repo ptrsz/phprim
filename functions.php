@@ -18,12 +18,12 @@ function cmp($a,$b){
 	if((mgh($a) != false) && (mgh($b) != false)){
 		if ($a == $b){
 			$x= $x + 1;
-				print "  $x  ";
+				//print "  $x  ";
 			return $x;
 		} 
 	}
 	if ($a == $b) $x = $x+0.5;
-		print ",$x,";
+		//print ",$x,";
 	return $x;
 }
 
