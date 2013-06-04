@@ -38,16 +38,13 @@
 				}
 				
 				$file_handle = fopen("magyar_latin2.txt", "rb");
-
+				
 				while (!feof($file_handle) ) {
 
 					$line_of_text = fgets($file_handle);
 					if(value($line_of_text,"abba") >= 2 ) print " $line_of_text <br/>";
 					}
 					fclose($file_handle);
-
-
-				
 
 
 ?>

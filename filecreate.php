@@ -1,4 +1,8 @@
 <?php
+
+/**
+purpose: Fájl létrehozása a script gyorsítása miatt.
+**/
 include 'functions.php';
 $infile  = fopen("magyar_latin2.txt", 'r');
 
