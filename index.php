@@ -23,7 +23,7 @@
 	    	<div class="form">
 	    		Jelenleg az "apacuka" szóval hasonlítja össze a program a beírt szót. 
 	    		Hátulról indulva a megegyező magánhagzók számát számolja ki.
-	        	<form action="input.php" method="get">
+	        	<form action="search.php" method="get">
 	        		<input name="szo" type="text">
 	                <p><input value="keress!" type="submit"></p>
 	            </form>

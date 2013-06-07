@@ -8,15 +8,8 @@ function mgh($char){
 	$mgh = "aeuáéoóöőüűúií";
 	return (strstr($mgh,$char));
 }
-/**
-purpose: Fajlmutatot kapva parameterkent, a txt-ben talalhato szavakbol 2dim array-t keszit.
-**/
-function array_create($file){
-	
-	
-}
 
-
+/*****************************************************/
 /**A dolog oroszlánrésze. 
 Két betűt hasonlít össze, és értékkent a kösztük lévő kollaboráció mértékét adja
 Ha mgh-k, és ==, akkor 1, ha msh, és ==, akkor 0.5
@@ -34,6 +27,8 @@ function cmp($a,$b){
 		//print ",$x,";
 	return $x;
 }
+
+/*****************************************************/
 
 function value($a,$b){ 
 	$value = 0;
