@@ -21,11 +21,11 @@
 	        </div>
 	    </div>
 	    	<div class="form">
-	        	Jelenleg az "apacuka" szóval hasonlítja össze a program a beírt szót.
-	    		Hátulról indulva a megegyező magánhagzók számát számolja ki.
+	        	Találatok:
 	        	<form action="search.php" method="get">
 	        		<input name="szo" type="text">
 	                <p><input value="keress!" type="submit"></p>
+	                <p> Találatok:</p>
 	            </form>
 	            	<?php
 /**Itt történik a main() lefutása, hívja a funtions.php-ban lévő fgv-ket!**/
@@ -36,15 +36,15 @@
 				if(!$szob){
 					echo "hiba";
 				}
-				
-				$file_handle = fopen("magyar_latin2.txt", "r");
+				echo("A $szob szóra a következő rímelhetnek: <br/><br/>");
+				$file_handle = fopen("magyar_latin2utf8.txt", "r");
 				
 				while (!feof($file_handle) ) {
 
 					$line_of_text = fgets($file_handle);
-					if(value($line_of_text,"abba") >= 2 ) print " $line_of_text <br/>";
+					if(value($line_of_text,"abba") >= 10 ) print " $line_of_text <br/>";
 					}
-					fclose($file_handle);
+				fclose($file_handle);
 
 
 ?>

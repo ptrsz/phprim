@@ -10,21 +10,17 @@ function mgh($char){
 }
 
 /*****************************************************/
-/**A dolog oroszlánrésze. 
-Két betűt hasonlít össze, és értékkent a kösztük lévő kollaboráció mértékét adja
-Ha mgh-k, és ==, akkor 1, ha msh, és ==, akkor 0.5
-**/
+
 function cmp($a,$b){
 	$x = 0;
 	if((mgh($a) != false) && (mgh($b) != false)){
 		if ($a == $b){
-			$x= $x + 1;
+			$x= $x + 10;
 				//print "  $x  ";
 			return $x;
 		} 
 	}
-	if ($a == $b) $x = $x+0.5;
-		//print ",$x,";
+	if ($a == $b) $x = $x+2.5;
 	return $x;
 }
 
@@ -32,16 +28,21 @@ function cmp($a,$b){
 
 function value($a,$b){ 
 	$value = 0;
+	$mod  = 0;
 	$i = strlen($a) -1;
 	$j = strlen($b) -1;
 	while(($i >= 0) && ($j >= 0)){
 		$value = $value + cmp($a[$i],$b[$j]);
 		$i--;
 		$j--;
+		$mod++;
 	}
-	return $value;
+	return $value - $mod;
 }
+/*****************************************************/
 
+/*****************************************************/
+/*****************************************************/
 //ennek a függvények már két, CSAK MGH ból vagy MSH ból álló stringet szabad átadni. Ez optimalizációs szempontból fontos.
 // rendesen működik.
 //még feladat: kiegészíteni azzal, hogy MSH esetén csak 0.5 el növelje a value értékét
