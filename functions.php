@@ -41,6 +41,29 @@ function value($a,$b){
 }
 /*****************************************************/
 
+
+function impvalue($mit,$mivel){
+	$value = 0;
+	
+	$i = strlen($mit) -1;
+	$j = strlen($mivel) -1;
+	while(($i >= 0) && ($j >= 0)){
+		$dec = 0;
+		if($mit[$i] == $mivel[$j]){
+			if(mgh($mit[$i])){
+				$value = $value + 10;
+			}
+			else{
+				$dec++;
+				$value = $value + (4 - $dec);
+			}
+			
+		}
+		$i--;
+		$j--;
+	}
+	return $value;
+}
 /*****************************************************/
 /*****************************************************/
 //ennek a függvények már két, CSAK MGH ból vagy MSH ból álló stringet szabad átadni. Ez optimalizációs szempontból fontos.

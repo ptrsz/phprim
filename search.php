@@ -29,23 +29,42 @@
 	            </form>
 	            	<?php
 /**Itt történik a main() lefutása, hívja a funtions.php-ban lévő fgv-ket!**/
+				
 				ini_set( 'default_charset', 'UTF-8' );
 				ini_set('display_errors', 'On');
 				include 'functions.php';
+				echo("debug impvalue test <br/>");
+				$t = impvalue("alma","alma");
+				echo( "$t <br/>");
+				
+				
+				$file_h = fopen("magyar_latin2utf8.txt","r");
+				while( !feof($file_h) ){
+					$line_of_t = fgets($file_h);
+					$szobazis[] = $line_of_t;
+				}
+				fclose($file_h);
+				
+				
 				$szob = $_GET["szo"];
 				if(!$szob){
-					echo "hiba";
+					echo "nem tudtam beolvasni a szot";
 				}
+				
 				echo("A $szob szóra a következő rímelhetnek: <br/><br/>");
-				$file_handle = fopen("magyar_latin2utf8.txt", "r");
+				
+				foreach($szobazis as $tmp){
+					if((impvalue($tmp,$szob) > 10)) echo " $szob <br/>";
+				}
+				/*$file_handle = fopen("magyar_latin2utf8.txt", "r");
 				
 				while (!feof($file_handle) ) {
 
 					$line_of_text = fgets($file_handle);
-					if(value($line_of_text,"abba") >= 10 ) print " $line_of_text <br/>";
+					if(impvalue($line_of_text,$szob) >= 10 ) print " $line_of_text <br/>";
 					}
 				fclose($file_handle);
-
+*/
 
 ?>
 	        </div>

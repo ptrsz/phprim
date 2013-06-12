@@ -18,6 +18,7 @@
 	        <div id="logo">
 	            <h1 id="logotitle">Rímkereső</h1>
 	            alpha verzió!
+	            
 	        </div>
 	    </div>      
 	    	<div class="form">
