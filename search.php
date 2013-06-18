@@ -33,15 +33,18 @@
 				ini_set( 'default_charset', 'UTF-8' );
 				ini_set('display_errors', 'On');
 				include 'functions.php';
-				echo("debug impvalue test <br/>");
-				$t = impvalue("alma","alma");
-				echo( "$t <br/>");
+				
+				
+							
+				
 				
 				
 				$file_h = fopen("magyar_latin2utf8.txt","r");
+				
 				while( !feof($file_h) ){
 					$line_of_t = fgets($file_h);
-					$szobazis[] = $line_of_t;
+					$szobazis[] = new WordClass($line_of_t,0);
+					
 				}
 				fclose($file_h);
 				
@@ -51,10 +54,12 @@
 					echo "nem tudtam beolvasni a szot";
 				}
 				
-				echo("A $szob szóra a következő rímelhetnek: <br/><br/>");
+				echo("A $szob szóra a következők rímelhetnek: <br/><br/>");
+				//bubbleSort($szobazis);
 				
 				foreach($szobazis as $tmp){
-					if((impvalue($tmp,$szob) > 10)) echo " $szob <br/>";
+					
+					echo " $tmp->word <br/>";
 				}
 				/*$file_handle = fopen("magyar_latin2utf8.txt", "r");
 				

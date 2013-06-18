@@ -4,6 +4,49 @@
 ini_set( 'default_charset', 'UTF-8' );
 ini_set('display_errors', 'Off');
 /**Ha a kapott érték magánhangzó, TRUE értékkel tér vissza**/
+
+/******************************************************/
+
+class WordClass {
+	
+	var $word;
+	var $value;
+	
+	function WordClass($word,$value = 0){
+		$this->word = $word;
+		$this->value = $value;
+	}
+	
+	function setWord($put){
+		$this->word = $put;
+	}
+	
+	function setValue($value){
+		$this->value = $value;
+	}
+}
+
+/******************************************************/
+
+function bubbleSort($array)
+{
+ if (!$length = count($array)) {
+  return $array;
+ }      
+ for ($outer = 0; $outer < $length; $outer++) {
+  for ($inner = 0; $inner < $length; $inner++) {
+   if ($array[$outer]->value < $array[$inner]->value) {
+    $tmp = $array[$outer];
+    $array[$outer] = $array[$inner];
+    $array[$inner] = $tmp;
+   }
+  }
+ }
+}
+
+/******************************************************/
+
+
 function mgh($char){
 	$mgh = "aeuáéoóöőüűúií";
 	return (strstr($mgh,$char));
